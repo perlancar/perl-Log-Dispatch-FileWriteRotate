@@ -1,6 +1,6 @@
 package Log::Dispatch::FileWriteRotate;
 
-use 5.010;
+use 5.010001;
 use warnings;
 use strict;
 
