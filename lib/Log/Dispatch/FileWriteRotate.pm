@@ -1,5 +1,8 @@
 package Log::Dispatch::FileWriteRotate;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use warnings;
 use strict;
@@ -7,8 +10,6 @@ use strict;
 use File::Write::Rotate;
 use Log::Dispatch::Output;
 use base qw(Log::Dispatch::Output);
-
-# VERSION
 
 sub new {
     my $class = shift;
@@ -24,6 +25,14 @@ sub _make_handle {
     my $self = shift;
     my %args = @_;
 
+    for (keys %args) {
+        # XXX hook_*
+        delete $args{$_} unless /\A(
+                                     dir|prefix|suffix|period|size|histories|
+                                     binmode|buffer_size|lock_mode|
+                                     rotate_probability
+                                 )\z/x;
+    }
     $self->{_fwr} = File::Write::Rotate->new(%args);
 }
 
