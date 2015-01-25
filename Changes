@@ -1,5 +1,13 @@
 Revision history for Log-Dispatch-FileWriteRotate
 
+0.03    2015-01-26 (PERLANCAR)
+
+	- No functional changes.
+
+	- Update to File::Write::Rotate 0.28 which checks arguments to its
+	  constructor.
+
+
 0.02    2013-11-11 (SHARYANTO)
 
         - No functional changes. Rebuild with MakeMaker instead of
