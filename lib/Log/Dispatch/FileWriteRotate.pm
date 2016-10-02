@@ -95,4 +95,6 @@ L<Log::Dispatch>
 
 L<File::Write::Rotate>
 
+L<Log::Dispatch::FileRotate>
+
 =cut
