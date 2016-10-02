@@ -1,5 +1,12 @@
 Revision history for Log-Dispatch-FileWriteRotate
 
+0.05    2016-10-02 (PERLANCAR)
+
+	- No functional changes.
+
+	- [doc] Mention Log::Dispatch::FileRotate.
+
+
 0.04    2016-01-19 (PERLANCAR)
 
         - No functional changes.
