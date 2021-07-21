@@ -42,6 +42,11 @@ sub log_message {
     $self->{_fwr}->write($args{message});
 }
 
+sub fwr {
+    my $self = shift;
+    $self->{_fwr};
+}
+
 1;
 # ABSTRACT: Log to files that archive/rotate themselves, w/ File::Write::Rotate
 
@@ -86,6 +91,13 @@ L<File::Write::Rotate>).
 Send a message to the appropriate output. Generally this shouldn't be called
 directly but should be called through the C<log()> method (in
 LLog::Dispatch::Output>).
+
+=head2 fwr
+
+Expose File::Write::Rotate object. You can do access this object e.g. to
+compress logfiles:
+
+ $file->fwd->compress;
 
 
 =head1 SEE ALSO
