@@ -26,9 +26,8 @@ sub _make_handle {
     my %args = @_;
 
     for (keys %args) {
-        # XXX hook_*
         delete $args{$_} unless /\A(
-                                     dir|prefix|suffix|period|size|histories|
+                                     hook_.+|dir|prefix|suffix|period|size|histories|
                                      binmode|buffer_size|lock_mode|
                                      rotate_probability
                                  )\z/x;
